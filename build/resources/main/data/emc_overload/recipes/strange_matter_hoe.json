@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "MM",
+    " H",
+    " T"
+  ],
+  "key": {
+    "M": {
+      "item": "emc_overload:strange_matter"
+    },
+    "H": {
+      "item": "projecte:rm_hoe"
+    },
+    "T": {
+      "item": "projecte:red_matter"
+    }
+  },
+  "result": {
+    "item": "emc_overload:strange_matter_hoe",
+    "count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " M",
+    "S "
+  ],
+  "key": {
+    "M": {
+      "item": "emc_overload:strange_matter"
+    },
+    "S": {
+      "item": "projecte:rm_shears"
+    }
+  },
+  "result": {
+    "item": "emc_overload:strange_matter_shears",
+    "count": 1
+  }
+}

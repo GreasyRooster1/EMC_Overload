@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "M",
+    "M",
+    "S"
+  ],
+  "key": {
+    "M": {
+      "item": "emc_overload:strange_matter"
+    },
+    "S": {
+      "item": "projecte:rm_sword"
+    }
+  },
+  "result": {
+    "item": "emc_overload:strange_matter_sword",
+    "count": 1
+  }
+}

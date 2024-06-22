@@ -1,0 +1,14 @@
+{
+  "item.emc_overload.strange_matter": "Strange Matter",
+  "item.emc_overload.strange_matter_sword": "Strange Matter Sword",
+  "item.emc_overload.strange_matter_pickaxe": "Strange Matter Pickaxe",
+  "item.emc_overload.strange_matter_axe": "Strange Matter Axe",
+  "item.emc_overload.strange_matter_shovel": "Strange Matter Shovel",
+  "item.emc_overload.strange_matter_hoe": "Strange Matter Hoe",
+  "item.emc_overload.strange_matter_shears": "Strange Matter Shears",
+  "item.emc_overload.strange_matter_hammer": "Strange Matter Hammer",
+
+  "block.emc_overload.strange_matter_block": "Strange Matter Block",
+
+  "creativetab.emc_overload_tab": "EMC Overload"
+}
