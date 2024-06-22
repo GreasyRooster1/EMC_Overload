@@ -20,6 +20,7 @@ import org.quantum.emc_overload.Items.ModItems;
 import org.quantum.emc_overload.Items.ModTabs;
 import org.slf4j.Logger;
 
+import static org.quantum.emc_overload.Klein.ModKleinSeries.registerKleinSeries;
 import static org.quantum.emc_overload.Matter.ModMatterTypes.registerMatters;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -37,6 +38,7 @@ public class EMCOverload {
         modEventBus.addListener(this::commonSetup);
 
         registerMatters();
+        registerKleinSeries();
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);

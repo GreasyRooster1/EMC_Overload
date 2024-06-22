@@ -36,7 +36,7 @@ public class KleinExtensionItem  extends ItemPE implements IItemEmcHolder, IBarH
             to = Long.MAX_VALUE
     ) long getKleinMaxEmc(ItemStack stack) {
         Item var2 = stack.getItem();
-        if (var2 instanceof KleinStar star) {
+        if (var2 instanceof KleinExtensionItem star) {
             return series.EMCValues[star.tier.ordinal()];
         } else {
             return series.EMCValues[0];
