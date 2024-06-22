@@ -7,6 +7,7 @@ import moze_intel.projecte.gameObjs.items.IBarHelper;
 import moze_intel.projecte.gameObjs.items.ItemPE;
 import moze_intel.projecte.gameObjs.items.KleinStar;
 import moze_intel.projecte.integration.IntegrationHelper;
+import moze_intel.projecte.utils.Constants;
 import moze_intel.projecte.utils.EMCHelper;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -20,21 +21,35 @@ import org.jetbrains.annotations.Range;
 
 public class KleinExtensionItem  extends ItemPE implements IItemEmcHolder, IBarHelper {
     public final KleinStar.EnumKleinTier tier;
+    public KleinSeries series;
 
-    public KleinStar(Item.Properties props, KleinStar.EnumKleinTier tier) {
+    public KleinExtensionItem(Item.Properties props, KleinStar.EnumKleinTier tier,KleinSeries series) {
         super(props);
         this.tier = tier;
         this.addItemCapability(EmcHolderItemCapabilityWrapper::new);
         this.addItemCapability("curios", IntegrationHelper.CURIO_CAP_SUPPLIER);
+        this.series = series;
     }
 
+    public @Range(
+            from = 1L,
+            to = Long.MAX_VALUE
+    ) long getKleinMaxEmc(ItemStack stack) {
+        Item var2 = stack.getItem();
+        if (var2 instanceof KleinStar star) {
+            return series.EMCValues[star.tier.ordinal()];
+        } else {
+            return series.EMCValues[0];
+        }
+    }
+    
     public boolean isBarVisible(@NotNull ItemStack stack) {
         return stack.hasTag();
     }
 
     public float getWidthForBar(ItemStack stack) {
         long starEmc = getEmc(stack);
-        return starEmc == 0L ? 1.0F : (float)(1.0 - (double)starEmc / (double) EMCHelper.getKleinStarMaxEmc(stack));
+        return starEmc == 0L ? 1.0F : (float) (1.0 - (double) starEmc / (double) getKleinMaxEmc(stack));
     }
 
     public int getBarWidth(@NotNull ItemStack stack) {
@@ -48,7 +63,7 @@ public class KleinExtensionItem  extends ItemPE implements IItemEmcHolder, IBarH
     public @NotNull InteractionResultHolder<ItemStack> use(Level level, Player player, @NotNull InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
         if (!level.isClientSide && !FMLEnvironment.production) {
-            setEmc(stack, EMCHelper.getKleinStarMaxEmc(stack));
+            setEmc(stack, getKleinMaxEmc(stack));
             return InteractionResultHolder.success(stack);
         } else {
             return InteractionResultHolder.pass(stack);
@@ -93,6 +108,7 @@ public class KleinExtensionItem  extends ItemPE implements IItemEmcHolder, IBarH
             from = 1L,
             to = Long.MAX_VALUE
     ) long getMaximumEmc(@NotNull ItemStack stack) {
-        return EMCHelper.getKleinStarMaxEmc(stack);
+        return getKleinMaxEmc(stack);
     }
 
+}
