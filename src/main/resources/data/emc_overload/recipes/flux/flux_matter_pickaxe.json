@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "MMM",
+    " P ",
+    " T "
+  ],
+  "key": {
+    "M": {
+      "item": "emc_overload:flux_matter"
+    },
+    "P": {
+      "item": "emc_overload:strange_matter_pickaxe"
+    },
+    "T": {
+      "item": "emc_overload:strange_matter"
+    }
+  },
+  "result": {
+    "item": "emc_overload:flux_matter_pickaxe",
+    "count": 1
+  }
+}

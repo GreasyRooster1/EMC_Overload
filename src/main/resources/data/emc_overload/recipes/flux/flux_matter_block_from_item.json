@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "emc_overload:flux_matter"
+    }
+  },
+  "result": {
+    "item": "emc_overload:flux_matter_block",
+    "count": 1
+  }
+}

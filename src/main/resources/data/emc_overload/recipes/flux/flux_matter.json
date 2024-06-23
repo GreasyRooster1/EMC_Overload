@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "FFF",
+    "RRR",
+    "FFF"
+  ],
+  "key": {
+    "F": {
+      "item": "projecte:aeternalis_fuel"
+    },
+    "R": {
+      "item": "emc_overload:strange_matter"
+    }
+  },
+  "result": {
+    "item": "emc_overload:flux_matter",
+    "count": 1
+  }
+}

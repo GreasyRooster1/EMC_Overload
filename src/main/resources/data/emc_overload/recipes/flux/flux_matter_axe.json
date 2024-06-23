@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "MM",
+    "MA",
+    " T"
+  ],
+  "key": {
+    "M": {
+      "item": "emc_overload:flux_matter"
+    },
+    "A": {
+      "item": "emc_overload:strange_matter_axe"
+    },
+    "T": {
+      "item": "emc_overload:strange_matter"
+    }
+  },
+  "result": {
+    "item": "emc_overload:flux_matter_axe",
+    "count": 1
+  }
+}
