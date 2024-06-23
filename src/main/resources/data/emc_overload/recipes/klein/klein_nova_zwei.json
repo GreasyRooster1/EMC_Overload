@@ -1,0 +1,13 @@
+{
+  "type":"projecte:crafting_shapeless_kleinstar",
+  "category":"equipment",
+  "ingredients":[
+    {"item":"emc_overload:klein_nova_ein"},
+    {"item":"emc_overload:klein_nova_ein"},
+    {"item":"emc_overload:klein_nova_ein"},
+    {"item":"emc_overload:klein_nova_ein"}
+  ],
+  "result":{
+    "item":"emc_overload:klein_nova_zwei"
+  }
+}

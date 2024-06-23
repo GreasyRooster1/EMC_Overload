@@ -8,6 +8,14 @@
   "item.emc_overload.strange_matter_shears": "Strange Matter Shears",
   "item.emc_overload.strange_matter_hammer": "Strange Matter Hammer",
 
+  "item.emc_overload.klein_nova_ein": "Klein Nova Ein",
+  "item.emc_overload.klein_nova_zwei": "Klein Nova Zwei",
+  "item.emc_overload.klein_nova_drei": "Klein Nova Drei",
+  "item.emc_overload.klein_nova_vier": "Klein Nova Vier",
+  "item.emc_overload.klein_nova_sphere": "Klein Nova Sphere",
+  "item.emc_overload.klein_nova_omega": "Klein Nova Omega",
+
+
   "block.emc_overload.strange_matter_block": "Strange Matter Block",
 
   "creativetab.emc_overload_tab": "EMC Overload"
