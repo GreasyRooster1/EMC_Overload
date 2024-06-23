@@ -11,6 +11,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.registries.RegistryObject;
 import org.quantum.emc_overload.Matter.Block.MatterBlock;
 import org.quantum.emc_overload.Matter.Tools.*;
+import org.quantum.emc_overload.Tags.ModTags;
 
 import static moze_intel.projecte.gameObjs.EnumMatterType.RED_MATTER;
 import static org.quantum.emc_overload.Blocks.ModBlocks.registerBlock;
@@ -26,6 +27,11 @@ public class MatterType{
     public MatterType(String _name, int _progression){
         name=_name;
         progression=_progression;
+        createToolTag();
+    }
+
+    public void createToolTag(){
+        ModTags.Blocks.addMatterToolTag("needs_"+name+"_tool");
     }
 
     public void createTier(){
