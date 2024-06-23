@@ -19,12 +19,12 @@ import net.minecraftforge.fml.loading.FMLEnvironment;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Range;
 
-public class KleinExtensionItem  extends ItemPE implements IItemEmcHolder, IBarHelper {
+public class KleinExtensionItem extends KleinStar implements IItemEmcHolder, IBarHelper {
     public final KleinStar.EnumKleinTier tier;
     public KleinSeries series;
 
     public KleinExtensionItem(Item.Properties props, KleinStar.EnumKleinTier tier,KleinSeries series) {
-        super(props);
+        super(props,tier);
         this.tier = tier;
         this.addItemCapability(EmcHolderItemCapabilityWrapper::new);
         this.addItemCapability("curios", IntegrationHelper.CURIO_CAP_SUPPLIER);
