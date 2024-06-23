@@ -3,21 +3,25 @@ package org.quantum.emc_overload.Items;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import org.quantum.emc_overload.EMCOverload;
+import org.quantum.emc_overload.Klein.Builder.KleinExtensionItem;
+import org.quantum.emc_overload.Klein.Builder.KleinSeries;
 import org.quantum.emc_overload.Matter.Builder.MatterItems;
 import org.quantum.emc_overload.Matter.Builder.MatterType;
 
+import static org.quantum.emc_overload.Klein.ModKleinSeries.kleinSeries;
 import static org.quantum.emc_overload.Matter.ModMatterTypes.matterTypes;
 
 public class ModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, EMCOverload.MODID);
 
-    public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("emc_overload",
+    public static final RegistryObject<CreativeModeTab> EMCOVERLOAD_TAB = CREATIVE_MODE_TABS.register("emc_overload",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(matterTypes.get(0).items.item.get()))
                     .title(Component.translatable("creativetab.emc_overload_tab"))
                     .displayItems((pParameters, pOutput) -> {
@@ -33,6 +37,13 @@ public class ModTabs {
                             pOutput.accept(items.hoe.get());
                             pOutput.accept(items.shears.get());
                             pOutput.accept(items.hammer.get());
+                        }
+
+                        for(KleinSeries series: kleinSeries){
+                            for(RegistryObject<KleinExtensionItem> reg:series.items){
+                                Item item = reg.get();
+                                pOutput.accept(item);
+                            }
                         }
 
                     })

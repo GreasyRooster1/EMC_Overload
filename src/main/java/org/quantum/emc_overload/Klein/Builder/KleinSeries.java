@@ -23,9 +23,10 @@ public class KleinSeries {
         }
     }
 
-    public RegistryObject<KleinExtensionItem> createKleinItem(KleinStar.EnumKleinTier kleinTier){
+    public void createKleinItem(KleinStar.EnumKleinTier kleinTier){
         Item.Properties prop = new Item.Properties().stacksTo(1).rarity(getRarity(kleinTier));
-        return ITEMS.register("klein_"+name+"_"+kleinTier.name,() -> new KleinExtensionItem(prop,kleinTier,this));
+        RegistryObject<KleinExtensionItem> item = ITEMS.register("klein_"+name+"_"+kleinTier.name,() -> new KleinExtensionItem(prop,kleinTier,this));
+        items.add(item);
     }
 
     public Rarity getRarity(KleinStar.EnumKleinTier kleinTier){

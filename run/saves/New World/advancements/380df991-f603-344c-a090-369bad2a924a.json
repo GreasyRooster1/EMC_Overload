@@ -1442,6 +1442,24 @@
     },
     "done": true
   },
+  "projecte:recipes/gem_helmet": {
+    "criteria": {
+      "has_helmet": "2024-06-22 01:15:43 -0700"
+    },
+    "done": true
+  },
+  "projecte:recipes/gem_chestplate": {
+    "criteria": {
+      "has_chestplate": "2024-06-22 01:15:43 -0700"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/emerald_block": {
+    "criteria": {
+      "has_emerald": "2024-06-22 01:17:53 -0700"
+    },
+    "done": true
+  },
   "minecraft:recipes/brewing/fermented_spider_eye": {
     "criteria": {
       "has_spider_eye": "2024-06-22 01:19:00 -0700"
@@ -1454,21 +1472,9 @@
     },
     "done": true
   },
-  "projecte:recipes/gem_helmet": {
-    "criteria": {
-      "has_helmet": "2024-06-22 01:15:43 -0700"
-    },
-    "done": true
-  },
   "minecraft:recipes/tools/fishing_rod": {
     "criteria": {
       "has_string": "2024-06-22 01:19:01 -0700"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/emerald_block": {
-    "criteria": {
-      "has_emerald": "2024-06-22 01:17:53 -0700"
     },
     "done": true
   },
@@ -1493,12 +1499,6 @@
   "minecraft:recipes/decorations/loom": {
     "criteria": {
       "has_string": "2024-06-22 01:19:01 -0700"
-    },
-    "done": true
-  },
-  "projecte:recipes/gem_chestplate": {
-    "criteria": {
-      "has_chestplate": "2024-06-22 01:15:43 -0700"
     },
     "done": true
   },

@@ -8,12 +8,12 @@ import org.quantum.emc_overload.Matter.Types.StrangeMatterType;
 import java.util.ArrayList;
 
 public class ModKleinSeries {
-    public static ArrayList<KleinSeries> matterTypes = new ArrayList<>();
+    public static ArrayList<KleinSeries> kleinSeries = new ArrayList<>();
     public static void registerKleinSeries(){
         registerKleinSeries(new KleinNovaSeries());
     }
 
     public static void registerKleinSeries(KleinSeries type){
-        matterTypes.add(type);
+        kleinSeries.add(type);
     }
 }
