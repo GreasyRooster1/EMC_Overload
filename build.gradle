@@ -147,8 +147,10 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
 
+
     implementation fg.deobf("curse.maven:projecte-226410:4901949")
     implementation fg.deobf("curse.maven:jei-238222:5440261")
+    //implementation fg.deobf("curse.maven:curios-309927:5367944")
 
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

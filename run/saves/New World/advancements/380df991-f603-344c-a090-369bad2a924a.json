@@ -1508,15 +1508,9 @@
     },
     "done": true
   },
-  "minecraft:adventure/shoot_arrow": {
+  "minecraft:recipes/misc/mojang_banner_pattern": {
     "criteria": {
-      "shot_arrow": "2024-06-24 05:22:54 -0700"
-    },
-    "done": true
-  },
-  "minecraft:recipes/redstone/dispenser": {
-    "criteria": {
-      "has_bow": "2024-06-24 05:22:38 -0700"
+      "has_enchanted_golden_apple": "2024-06-24 05:18:04 -0700"
     },
     "done": true
   },
@@ -1526,9 +1520,15 @@
     },
     "done": false
   },
-  "minecraft:recipes/misc/mojang_banner_pattern": {
+  "minecraft:recipes/redstone/dispenser": {
     "criteria": {
-      "has_enchanted_golden_apple": "2024-06-24 05:18:04 -0700"
+      "has_bow": "2024-06-24 05:22:38 -0700"
+    },
+    "done": true
+  },
+  "minecraft:adventure/shoot_arrow": {
+    "criteria": {
+      "shot_arrow": "2024-06-24 05:22:54 -0700"
     },
     "done": true
   },
