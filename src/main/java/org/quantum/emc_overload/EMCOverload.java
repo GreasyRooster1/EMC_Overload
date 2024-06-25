@@ -2,6 +2,7 @@ package org.quantum.emc_overload;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -63,6 +64,10 @@ public class EMCOverload {
         LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
+    }
+
+    public static ResourceLocation rl(String path) {
+        return new ResourceLocation(MODID, path);
     }
 
     @SubscribeEvent

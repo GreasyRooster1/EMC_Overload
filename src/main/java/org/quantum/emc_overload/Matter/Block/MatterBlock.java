@@ -16,7 +16,7 @@ public class MatterBlock extends Block implements TieredMatterBlock {
     public MatterBlock(MatterTier tier) {
         super(BlockBehaviour.Properties.of()
                 .strength(3000000.0F+(tier.getProgression()*1000000.0F), 6000000.0F+(tier.getProgression()*1000000.0F))
-                .lightLevel(litBlockEmission(15))
+                .lightLevel((block) -> 15)
         );
         this.matterTier = tier;
     }
