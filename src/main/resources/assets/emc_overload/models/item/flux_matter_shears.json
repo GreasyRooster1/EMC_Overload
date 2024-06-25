@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "emc_overload:item/flux_matter_shears"
+  }
+}
