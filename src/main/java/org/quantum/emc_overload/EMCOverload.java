@@ -19,6 +19,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import org.quantum.emc_overload.Blocks.ModBlocks;
 import org.quantum.emc_overload.Items.ModItems;
 import org.quantum.emc_overload.Items.ModTabs;
+import org.quantum.emc_overload.Rendering.LayerDevRing;
 import org.slf4j.Logger;
 
 import static org.quantum.emc_overload.Klein.ModKleinSeries.registerKleinSeries;
@@ -34,6 +35,7 @@ public class EMCOverload {
     private static final Logger LOGGER = LogUtils.getLogger();
     public EMCOverload() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
 
         // Register the commonSetup method for mod loading
         modEventBus.addListener(this::commonSetup);
@@ -67,7 +69,7 @@ public class EMCOverload {
     }
 
     public static ResourceLocation rl(String path) {
-        return new ResourceLocation(MODID, path);
+        return new ResourceLocation("emc_overload", path);
     }
 
     @SubscribeEvent

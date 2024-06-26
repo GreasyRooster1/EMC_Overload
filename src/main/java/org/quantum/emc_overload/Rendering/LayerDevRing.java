@@ -23,9 +23,9 @@ import static org.quantum.emc_overload.Rendering.ModRenderType.DEV_RING_RENDERER
 public class LayerDevRing extends RenderLayer<AbstractClientPlayer, PlayerModel<AbstractClientPlayer>> {
     private static final UUID Q_UUID = UUID.fromString("3dcfb3de-80a2-4596-9d82-5bcb5b405676");
     private static final UUID C_UUID = UUID.fromString("ee06c1b0-5520-4cc1-add5-0aeaf95c78a9");
-    private static final ResourceLocation Q1_LOC = EMCOverload.rl("textures/models/Q1.png");
-    private static final ResourceLocation Q2_LOC = EMCOverload.rl("textures/models/Q2.png");
-    private static final ResourceLocation C1_LOC = EMCOverload.rl("textures/models/C1.png");
+    private static final ResourceLocation Q1_LOC = EMCOverload.rl("textures/models/quantum1.png");
+    private static final ResourceLocation Q2_LOC = EMCOverload.rl("textures/models/quantum2.png");
+    private static final ResourceLocation C1_LOC = EMCOverload.rl("textures/models/crafter1.png");
     private final PlayerRenderer render;
 
     public LayerDevRing(PlayerRenderer renderer) {
@@ -38,8 +38,8 @@ public class LayerDevRing extends RenderLayer<AbstractClientPlayer, PlayerModel<
             boolean isQ = Q_UUID.equals(player.getUUID())||!FMLEnvironment.production;
             if (!FMLEnvironment.production || Q_UUID.equals(player.getUUID()) || C_UUID.equals(player.getUUID())) {
                 matrix.pushPose();
-                ((PlayerModel)this.render.getModel()).jacket.translateAndRotate(matrix);
-                double yShift = 0;//-0.498;
+                ((PlayerModel<?>)this.render.getModel()).jacket.translateAndRotate(matrix);
+                double yShift = -0.497;
 
                 if (player.isCrouching()) {
                     matrix.mulPose(Axis.XP.rotationDegrees(-28.64789F));
@@ -47,7 +47,7 @@ public class LayerDevRing extends RenderLayer<AbstractClientPlayer, PlayerModel<
                 }
 
                 matrix.mulPose(Axis.ZP.rotationDegrees(180.0F));
-                matrix.scale(6.0F, 6.0F, 6.0F);
+                matrix.scale(3.0F, 3.0F, 3.0F);
                 matrix.translate(-0.5, yShift, -0.5);
 
                 ResourceLocation loc = Q1_LOC;
@@ -59,7 +59,7 @@ public class LayerDevRing extends RenderLayer<AbstractClientPlayer, PlayerModel<
                     loc = C1_LOC;
                 }
 
-                VertexConsumer builder = renderer.getBuffer((RenderType) DEV_RING_RENDERER.apply(Q1_LOC));
+                VertexConsumer builder = renderer.getBuffer((RenderType) DEV_RING_RENDERER.apply(loc));
                 Matrix4f matrix4f = matrix.last().pose();
                 builder.vertex(matrix4f, 0.0F, 0.0F, 0.0F).color(255, 0, 255, 255).uv(0.0F, 0.0F).endVertex();
                 builder.vertex(matrix4f, 0.0F, 0.0F, 1.0F).color(255, 0, 255, 255).uv(0.0F, 1.0F).endVertex();
