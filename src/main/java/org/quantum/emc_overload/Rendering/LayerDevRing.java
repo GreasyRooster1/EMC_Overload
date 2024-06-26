@@ -51,11 +51,11 @@ public class LayerDevRing extends RenderLayer<AbstractClientPlayer, PlayerModel<
                 float angle = (timeVal/(secondsPerRotation*20))*360;
 
                 if(isQuantum){
-                    createCircle(angle,0,3f,qColor,QUANTUM1_LOC,matrix,renderer,player.isCrouching());
+                    createCircle(angle,0,3.3f,qColor,QUANTUM1_LOC,matrix,renderer,player.isCrouching());
                     createCircle(-angle,0,2.5f,qColor,QUANTUM2_LOC,matrix,renderer,player.isCrouching());
                 }
                 if(isCrafter){
-                    createCircle(angle,1.5f,1.1f,cColor,CRAFTER1_LOC,matrix,renderer,player.isCrouching());
+                    createCircle(angle,.75f,1.1f,cColor,CRAFTER1_LOC,matrix,renderer,player.isCrouching());
                 }
             }
 
@@ -74,7 +74,7 @@ public class LayerDevRing extends RenderLayer<AbstractClientPlayer, PlayerModel<
         }
 
         matrix.mulPose(Axis.ZP.rotationDegrees(180F));
-        matrix.mulPose(Axis.YP.rotationDegrees(angle- jacket.yRot));
+        matrix.mulPose(Axis.YP.rotationDegrees(angle));
         matrix.scale(scale, 3, scale);
         matrix.translate(-0.5, yShift, -0.5);
 
